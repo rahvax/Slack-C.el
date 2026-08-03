@@ -19,7 +19,7 @@
   :type 'string
   :group 'dir)
 
-(defun create-c-dir ()
+(defun slackc-project-new ()
   "Criar o projeto de C."
   (interactive)
   (let* ((project-name (read-from-minibuffer "Nome: "))
@@ -29,6 +29,7 @@
          (main-file (expand-file-name "src/main.c" project-dir))
          (makefile (expand-file-name "makefile" project-dir))
          (gitignore (expand-file-name ".gitignore" project-dir)))
+
     (message "Projeto C criado em: %s" project-dir)))
 
 (provide 'SlackC-Project)
