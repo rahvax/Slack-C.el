@@ -1,0 +1,14 @@
+;;; SlackC.el --- Criando projetos em C -*- lexical-binding: t; -*-
+
+;; Copyright (C) 2026 Gabriel Caelestis
+
+;; Author: Gabriel Caelestis <gabriel@caelestis.one>
+;; Version: 0.0.1
+;; Package-Requires: ((emacs "30.2"))
+;; Keywords: clang
+;; URL: https://github.com/rahvax/slackc-project.git
+
+;;; Commentary:
+;;; Code:
+
+;;; SlackC.el ends here
