@@ -22,13 +22,15 @@
 (defun create-c-dir ()
   "Criar o projeto de C."
   (interactive)
-  (let* ((project-name (read-from-minibuffer "Nome:")))
+  (let* ((project-name (read-from-minibuffer "Nome: "))
+         (project-dir (expand-file-name project-name dir-path))
+         (src-dir (expand-file-name "src/" project-dir))
+         (include-dir (expand-file-name "include/" project-dir))
+         (main-file (expand-file-name "src/main.c" project-dir))
+         (makefile (expand-file-name "makefile" project-dir))
+         (gitignore (expand-file-name ".gitignore" project-dir)))
+    (message "Projeto C criado em: %s" project-dir)))
 
-    (unless (file-directory-p (concat dir-path project-name))
-      (make-directory (concat dir-path project-name)))
-    (with-temp-file (concat dir-path project-name "/main.c")
-      (insert "#include <stdio.h>"))
-    (message "Criado %s" (concat dir-path project-name)))
-  )
 (provide 'SlackC-Project)
 ;;; SlackC.el ends here
+
