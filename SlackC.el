@@ -51,17 +51,17 @@ DBGFLAGS = -g -O0 -DDEBUG\n\
 RELFLAGS = -O2\n\
 \n\
 debug: src/main.c | $(DIR)\n\
-    gcc $(FLAGS) $(DBGFLAGS) src/*.c -o $(DIR)/debug/$(NAME)\n\
+\tgcc $(FLAGS) $(DBGFLAGS) src/*.c -o $(DIR)/debug/$(NAME)\n\
 \n\
 release: src/main.c | $(DIR)\n\
-    gcc $(FLAGS) $(RELFLAGS) src/*.c -o $(DIR)/release/$(NAME)\n\
+\tgcc $(FLAGS) $(RELFLAGS) src/*.c -o $(DIR)/release/$(NAME)\n\
 \n\
 test: debug\n\
-    ./$(DIR)/debug/$(NAME)\n\
+\t./$(DIR)/debug/$(NAME)\n\
 \n\
 $(DIR):\n\
-    @mkdir -p $(DIR)/debug\n\
-    @mkdir -p $(DIR)/release\n"
+\t@mkdir -p $(DIR)/debug\n\
+\t@mkdir -p $(DIR)/release\n"
         project-name)))
     (with-temp-file gitignore
       (insert
