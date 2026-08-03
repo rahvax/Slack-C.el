@@ -43,8 +43,7 @@
 
     (with-temp-file makefile
       (insert
-       (format"
-NAME=%s\n\
+       (format"NAME=%s\n\
 DIR=build\n\
 FLAGS = -std=c17 -Wall -Wextra -Wpedantic -Iinclude\n\
 DBGFLAGS = -g -O0 -DDEBUG\n\
