@@ -5,7 +5,7 @@
 ;; Author: Gabriel Caelestis <gabriel@caelestis.one>
 ;; Version: 0.0.1
 ;; Package-Requires: ((emacs "30.2"))
-;; Keywords: clang
+;; Keywords: clang, git, Forgejo
 ;; URL: https://github.com/rahvax/slackc-project.git
 
 ;;; Commentary:
