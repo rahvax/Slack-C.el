@@ -19,5 +19,16 @@
   :type 'string
   :group 'dir)
 
+(defun create-c-dir ()
+  "Criar o projeto de C."
+  (interactive)
+  (let* ((project-name (read-from-minibuffer "Nome:")))
+
+    (unless (file-directory-p (concat dir-path project-name))
+      (make-directory (concat dir-path project-name)))
+    (with-temp-file (concat dir-path project-name "/main.c")
+      (insert "#include <stdio.h>"))
+    (message "Criado %s" (concat dir-path project-name)))
+  )
 (provide 'SlackC-Project)
 ;;; SlackC.el ends here
