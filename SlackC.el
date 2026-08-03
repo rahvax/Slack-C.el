@@ -32,6 +32,15 @@
 
     (make-directory src-dir t)
     (make-directory include-dir t)
+
+    (with-temp-file main-file
+      (insert
+       "#include <stdio.h>\n\n"
+       "int main(void){\n"
+       "  printf(\"Hello, world!\\n\");\n"
+       "  return 0;\n"
+       "}\n"))
+
     (message "Projeto C criado em: %s" project-dir)))
 
 (provide 'SlackC-Project)
