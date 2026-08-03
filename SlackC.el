@@ -11,4 +11,5 @@
 ;;; Commentary:
 ;;; Code:
 
+(provide 'SlackC-Project)
 ;;; SlackC.el ends here
