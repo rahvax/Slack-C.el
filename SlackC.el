@@ -10,6 +10,14 @@
 
 ;;; Commentary:
 ;;; Code:
+(defgroup diretorio nil
+  "Configurações para o diretorio."
+  :group 'dir
+  :prefix "dir-")
+(defcustom dir-path "~/Documents/Forgejo/"
+  "O PATH padrão onde o projeto vai ser criado."
+  :type 'string
+  :group 'dir)
 
 (provide 'SlackC-Project)
 ;;; SlackC.el ends here
