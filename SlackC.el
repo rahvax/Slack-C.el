@@ -30,6 +30,8 @@
          (makefile (expand-file-name "makefile" project-dir))
          (gitignore (expand-file-name ".gitignore" project-dir)))
 
+    (make-directory src-dir t)
+    (make-directory include-dir t)
     (message "Projeto C criado em: %s" project-dir)))
 
 (provide 'SlackC-Project)
