@@ -1,7 +1,7 @@
 ## Forgejo
 Estou utilizando o Forgejo para programar esse projeto. O Github está servindo apenas de vitrine para o projeto. Você pode conferir os commits pelo Github normalmente, pois estou usando o método `Push Mirror`.
 
-# Slack C: Project
+# Slack C 
 A ideia é apenas automatizar as criações de repositórios de C para meu Forgejo, evitando ter que repetir sempre. Geralmente costumo usar o mesmo padrão de makefile e diretório para programar, editando quando preciso. Esse projeto cria um pacote para o Emacs, enquanto me aprofundo, para automatizar a criação de projetos.
 
 ## Makefile

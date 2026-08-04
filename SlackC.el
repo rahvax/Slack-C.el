@@ -9,6 +9,7 @@
 ;; URL: https://github.com/rahvax/slackc-project.git
 
 ;;; Commentary:
+;;; Abrir um diretório para projetos em C de forma genérica e configurável.
 ;;; Code:
 (defgroup diretorio nil
   "Configurações para o diretorio."
