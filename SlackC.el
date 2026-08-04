@@ -20,7 +20,7 @@
   :type 'string
   :group 'dir)
 
-(defun slackc-project-new ()
+(defun slackc-new ()
   "Criar o projeto de C."
   (interactive)
   (let* ((project-name (read-from-minibuffer "Nome: "))
