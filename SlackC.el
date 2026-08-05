@@ -1,4 +1,4 @@
-;;; SlackC.el --- Criando projetos em C pré-configurados -*- lexical-binding: t; -*-
+;;; slackc.el --- Criando projetos em C pré-configurados -*- lexical-binding: t; -*-
 
 ;; Copyright (C) 2026 Gabriel Caelestis
 
