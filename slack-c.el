@@ -37,23 +37,29 @@
          (include-dir (expand-file-name "include/" project-dir))
          (main-file (expand-file-name "src/main.c" project-dir))
          (makefile (expand-file-name "makefile" project-dir))
-         (gitignore (expand-file-name ".gitignore" project-dir)))
+         (gitignore (expand-file-name ".gitignore" project-dir))
+         (main-template (expand-file-name "main.template"
+	                                  slackc-template-directory))
+         (makefile-template (expand-file-name "makefile.template"
+                                              slackc-template-directory))
+         (gitignore-template (expand-file-name "gitignore.template"
+                                               slackc-template-directory)))
 
     (make-directory src-dir t)
     (make-directory include-dir t)
 
     (with-temp-file main-file
-      (insert-file-contents "main.template"))
+      (insert-file-contents main-template))
 
     (let ((make-template
 	   (with-temp-buffer
-	     (insert-file-contents "makefile.template")
+	     (insert-file-contents makefile-template)
 	     (buffer-string))))
     (with-temp-file makefile
       (insert (format make-template project-name))))
 
     (with-temp-file gitignore
-      (insert-file-contents "gitignore.template"))
+      (insert-file-contents gitignore-template))
     
     (message "Projeto %s criado em: %s" project-name project-dir)))
 
