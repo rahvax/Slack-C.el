@@ -63,12 +63,14 @@ $(DIR):\n\
 \t@mkdir -p $(DIR)/debug\n\
 \t@mkdir -p $(DIR)/release\n"
         project-name)))
+
     (with-temp-file gitignore
       (insert
        "*.tmp\n"
        "*.el\n"
        "*.org\n"
        "build/\n"))
+    
     (message "Projeto %s criado em: %s" project-name project-dir)))
 
 (provide 'Slack-C.el)
