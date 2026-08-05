@@ -1,4 +1,4 @@
-;;; slackc.el --- Criando projetos em C pré-configurados -*- lexical-binding: t; -*-
+;;; slack-c.el --- Criando projetos em C pré-configurados -*- lexical-binding: t; -*-
 
 ;; Copyright (C) 2026 Gabriel Caelestis
 
@@ -49,5 +49,5 @@
     
     (message "Projeto %s criado em: %s" project-name project-dir)))
 
-(provide 'slackc)
-;;; SlackC.el ends here
+(provide 'slack-c)
+;;; slack-c.el ends here
