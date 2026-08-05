@@ -5,7 +5,7 @@ Estou utilizando o Forgejo para programar esse projeto. O Github está servindo 
 A ideia é apenas automatizar as criações de repositórios de C para meu Forgejo, evitando ter que repetir sempre. Geralmente costumo usar o mesmo padrão de makefile e diretório para programar, editando quando preciso. Esse projeto cria um pacote para o Emacs, enquanto me aprofundo, para automatizar a criação de projetos.
 
 ## Templates
-Você pode editar os templates que serão carregados em um projeto C pelos arquivos `main.template`, `makefile.template` e `gitignore.template`. Na próxima atualização será criado uma personalização para quem quiser trocar o arquivo de template carregável para outro diretório e permitir organização própria.
+Você pode editar os templates que serão carregados em um projeto C pelos arquivos `main.template`, `makefile.template` e `gitignore.template` dentro do diretório de `templates/`. Na próxima atualização será criado uma personalização para quem quiser trocar o arquivo de template carregável para outro diretório e permitir organização própria.
 
 ### Makefile padrão
 Acredito que seja o único que merece uma explicação melhor, por enquanto. É assim que geralmente eu produzo algoritmos editando apenas alguma necessidade ou outra. Até então considero uma boa configuração de makefile, e no futuro posso trocar.
