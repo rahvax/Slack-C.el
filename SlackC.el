@@ -1,4 +1,4 @@
-;;; slackc.el --- Criando projetos em C pré-configurados -*- lexical-binding: t; -*-
+;;; SlackC.el --- Criando projetos em C pré-configurados -*- lexical-binding: t; -*-
 
 ;; Copyright (C) 2026 Gabriel Caelestis
 
@@ -11,16 +11,16 @@
 ;;; Commentary:
 ;;; Abrir um diretório para projetos em C de forma genérica e configurável.
 ;;; Code:
-(defgroup diretorio nil
+(defgroup SlackC-directory nil
   "Configurações para o diretorio."
-  :group 'dir
+  :group 'slackc-dir
   :prefix "dir-")
 (defcustom dir-path "~/Documents/Forgejo/"
   "O PATH padrão onde o projeto vai ser criado."
   :type 'string
-  :group 'dir)
+  :group 'slackc-dir)
 
-(defun slackc-new ()
+(defun slackc-new-project ()
   "Criar o projeto de C."
   (interactive)
   (let* ((project-name (read-from-minibuffer "Nome: "))
@@ -73,4 +73,3 @@ $(DIR):\n\
 
 (provide 'Slack-C.el)
 ;;; SlackC.el ends here
-
