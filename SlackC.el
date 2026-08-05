@@ -49,5 +49,5 @@
     
     (message "Projeto %s criado em: %s" project-name project-dir)))
 
-(provide 'slack-c)
+(provide 'slackc)
 ;;; SlackC.el ends here
