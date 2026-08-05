@@ -45,11 +45,7 @@
       (insert (format make-template project-name))))
 
     (with-temp-file gitignore
-      (insert
-       "*.tmp\n"
-       "*.el\n"
-       "*.org\n"
-       "build/\n"))
+      (insert-file-contents "gitignore.template"))
     
     (message "Projeto %s criado em: %s" project-name project-dir)))
 
