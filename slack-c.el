@@ -11,11 +11,11 @@
 ;;; Commentary:
 ;;; Abrir um diretório para projetos em C de forma genérica e configurável.
 ;;; Code:
-(defgroup SlackC-directory nil
+(defgroup slackc-directory nil
   "Configurações para o diretorio."
   :group 'slackc-dir
   :prefix "dir-")
-(defcustom dir-path "~/Documents/Forgejo/"
+(defcustom slackc-dir-path "~/Documents/Forgejo/"
   "O PATH padrão onde o projeto vai ser criado."
   :type 'string
   :group 'slackc-dir)
@@ -24,7 +24,7 @@
   "Criar o projeto de C."
   (interactive)
   (let* ((project-name (read-from-minibuffer "Nome: "))
-         (project-dir (expand-file-name project-name dir-path))
+         (project-dir (expand-file-name project-name slackc-dir-path))
          (src-dir (expand-file-name "src/" project-dir))
          (include-dir (expand-file-name "include/" project-dir))
          (main-file (expand-file-name "src/main.c" project-dir))
