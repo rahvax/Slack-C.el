@@ -35,12 +35,7 @@
     (make-directory include-dir t)
 
     (with-temp-file main-file
-      (insert
-       "#include <stdio.h>\n\n"
-       "int main(void){\n"
-       "  printf(\"Hello, world!\\n\");\n"
-       "  return 0;\n"
-       "}\n"))
+      (insert-file-contents "main.template"))
 
     (let ((make-template
 	   (with-temp-buffer
