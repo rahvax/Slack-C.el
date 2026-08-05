@@ -3,7 +3,7 @@
 ;; Copyright (C) 2026 Gabriel Caelestis
 
 ;; Author: Gabriel Caelestis <gabriel@caelestis.one>
-;; Version: 0.0.1
+;; Version: 0.0.2
 ;; Package-Requires: ((emacs "30.2"))
 ;; Keywords: clang, git, Forgejo
 ;; URL: https://github.com/rahvax/slack-c.el.git
@@ -19,6 +19,13 @@
   "O PATH padrão onde o projeto vai ser criado."
   :type 'string
   :group 'slackc-dir)
+
+(defcustom slackc-template-path nil
+  "O PATH padrão dos templates: se for nil, usa o diretório de templates que vem com o pacote."
+  :type '(choice
+          (const :tag "Usando diretórios padrões" nil)
+          (directory :tag "Diretório personalizados"))
+  :group 'slackc-directory)
 
 (defvar slackc-directory
   (file-name-directory (or load-file-name buffer-file-name))
