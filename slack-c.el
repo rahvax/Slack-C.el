@@ -20,6 +20,14 @@
   :type 'string
   :group 'slackc-dir)
 
+(defvar slackc-directory
+  (file-name-directory (or load-file-name buffer-file-name))
+  "Diretório do slack-c.el instalado.")
+
+(defvar slackc-template-directory
+  (expand-file-name "templates/" slackc-directory)
+  "Diretório de templates do slack-c.")
+
 (defun slackc-new-project ()
   "Criar o projeto de C."
   (interactive)
