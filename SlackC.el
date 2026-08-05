@@ -42,27 +42,12 @@
        "  return 0;\n"
        "}\n"))
 
+    (let ((make-template
+	   (with-temp-buffer
+	     (insert-file-contents "makefile.template")
+	     (buffer-string))))
     (with-temp-file makefile
-      (insert
-       (format"NAME=%s\n\
-DIR=build\n\
-FLAGS = -std=c17 -Wall -Wextra -Wpedantic -Iinclude\n\
-DBGFLAGS = -g -O0 -DDEBUG\n\
-RELFLAGS = -O2\n\
-\n\
-debug: src/main.c | $(DIR)\n\
-\tgcc $(FLAGS) $(DBGFLAGS) src/*.c -o $(DIR)/debug/$(NAME)\n\
-\n\
-release: src/main.c | $(DIR)\n\
-\tgcc $(FLAGS) $(RELFLAGS) src/*.c -o $(DIR)/release/$(NAME)\n\
-\n\
-test: debug\n\
-\t./$(DIR)/debug/$(NAME)\n\
-\n\
-$(DIR):\n\
-\t@mkdir -p $(DIR)/debug\n\
-\t@mkdir -p $(DIR)/release\n"
-        project-name)))
+      (insert (format make-template project-name))))
 
     (with-temp-file gitignore
       (insert

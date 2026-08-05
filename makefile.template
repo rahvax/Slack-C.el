@@ -1,0 +1,18 @@
+NAME=%s
+DIR=build
+FLAGS = -std=c17 -Wall -Wextra -Wpedantic -Iinclude
+DBGFLAGS = -g -O0 -DDEBUG
+RELFLAGS = -O2
+
+debug: src/main.c | $(DIR)
+	gcc $(FLAGS) $(DBGFLAGS) src/*.c -o $(DIR)/debug/$(NAME)
+
+release: src/main.c | $(DIR)
+	gcc $(FLAGS) $(RELFLAGS) src/*.c -o $(DIR)/release/$(NAME)
+
+test: debug
+	./$(DIR)/debug/$(NAME)
+
+$(DIR):
+	@mkdir -p $(DIR)/debug
+	@mkdir -p $(DIR)/release
