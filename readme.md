@@ -11,7 +11,7 @@ Você pode editar os templates que serão carregados em um projeto C pelos arqui
 Acredito que seja o único que merece uma explicação melhor, por enquanto. É assim que geralmente eu produzo algoritmos editando apenas alguma necessidade ou outra. Até então considero uma boa configuração de makefile, e no futuro posso trocar.
 ```makefile
 NAME=              # Nome do binario
-DIR=build
+DIR=               # Diretório das builds
 FLAGS =            # Flags padrões do compilador
 DBGFLAGS =         # Flags para debug (+ flag para macros de debug)
 RELFLAGS =         # Flags para a versão final
@@ -25,6 +25,7 @@ release: src/main.c | $(DIR)
 	gcc $(FLAGS) $(RELFLAGS) src/*.c -o $(DIR)/release/$(NAME)
 
 # Testar a compilação de debug
+# Aqui você poderia personalizar comandos extras ou argumentos
 test: debug
 	./$(DIR)/debug/$(NAME)
 
