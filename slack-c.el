@@ -14,7 +14,7 @@
 (defgroup slackc-directory nil
   "Configurações para o diretorio."
   :group 'slackc-dir
-  :prefix "dir-")
+  :prefix "slackc-dir-")
 (defcustom slackc-dir-path "~/Documents/Forgejo/"
   "O PATH padrão onde o projeto vai ser criado."
   :type 'string
