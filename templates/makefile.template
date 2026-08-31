@@ -1,7 +1,7 @@
 NAME=%s
 DIR=build
-FLAGS = -std=c17 -Wall -Wextra -Wpedantic -Iinclude
-DBGFLAGS = -g -O0 -DDEBUG
+FLAGS = -std=c17 -Wall -Wextra -Wpedantic
+DBGFLAGS = -g -O0 -DDEBUG -Wshadow -fsanitize=address,undefined -g
 RELFLAGS = -O2
 
 debug: src/main.c | $(DIR)
