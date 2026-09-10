@@ -6,7 +6,6 @@
 ;; Keywords: clang, git, Forgejo
 ;; URL: https://github.com/rahvax/slack-c.el.git
 ;;; Commentary:
-
 ;;; Abrir um diretório para projetos em C de forma genérica e configurável.
 ;;; Code:
 (defgroup slackc-directory nil
