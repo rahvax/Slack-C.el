@@ -1,7 +1,5 @@
 ;;; slack-c.el --- Criando projetos em C pré-configurados -*- lexical-binding: t; -*-
-
 ;; Copyright (C) 2026 Gabriel Caelestis
-
 ;; Author: Gabriel Caelestis <gabriel@caelestis.one>
 ;; Version: 0.0.2
 ;; Package-Requires: ((emacs "30.2"))
